@@ -4,7 +4,7 @@ $prefix: 'eui-code';
 .#{$prefix} {
   border: 1px solid $gray-lighter;
   border-radius: $border-radius-4;
-  margin: 0 40px;
+  margin-bottom: 40px;
   font-size: 14px;
   .#{$prefix}-demo-preview {
     padding: 40px;
