@@ -10,6 +10,7 @@ $prefix: 'eui-code';
     padding: 40px;
   }
   .#{$prefix}-demo-bottom {
+    outline: 0 none;
     -moz-user-select: none;
     -ms-flex-align: center;
     -ms-flex-pack: justify;

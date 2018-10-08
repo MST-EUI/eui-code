@@ -1,6 +1,6 @@
 module.exports = {
   'zh-cn': {
-    btnText: '组件使用',
+    btnText: '查看源码',
   },
   en: {
     btnText: 'Code view',

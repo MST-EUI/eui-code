@@ -15,7 +15,7 @@ export default class EuiCode extends React.Component {
   static propTypes = {
     children: PropTypes.any,
     lang: PropTypes.string,
-    sourceCode: PropTypes.string,
+    sourceCode: PropTypes.any,
     style: PropTypes.object,
     className: PropTypes.string,
     buttonText: PropTypes.any,
@@ -35,7 +35,7 @@ export default class EuiCode extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      codeVisible: true,
+      codeVisible: false,
     };
   }
 
@@ -54,6 +54,7 @@ export default class EuiCode extends React.Component {
       className,
       buttonText,
       lang,
+      sourceCode,
     } = this.props;
 
     const btnDescription = buttonText || i18n[lang].btnText;
@@ -61,41 +62,6 @@ export default class EuiCode extends React.Component {
     const {
       codeVisible,
     } = this.state;
-
-    const c = `
-    /*
-    * annotation like \`placeholder begin *** and
-    * placeholder end ***\` is required for generate eui manual, please keep it
-    */
-    import React from 'react';
-    import ReactDOM from 'react-dom';
-    import '@mistong/eui/dist/index.css';
-
-    /* placeholder begin src */
-    import EuiCode from '../src';
-    /* placeholder end src */
-
-    import './index.scss';
-
-    /* placeholder begin class */
-    class Demo extends React.Component {
-      render() {
-        return (
-          <div className="demo eui-empty-data-demo">
-            <EuiCode />
-          </div>
-        );
-      }
-    }
-    /* placeholder end class */
-
-    /* placeholder begin ReactDOM */
-    ReactDOM.render(
-      <Demo />,
-      document.getElementById('app'),
-    );
-    /* placeholder end ReactDOM */
-    `;
 
     return (
       <div
@@ -121,7 +87,7 @@ export default class EuiCode extends React.Component {
                 language="javascript"
                 customStyle={{ backgroundColor: 'transparent', padding: 0 }}
               >
-                {c}
+                {sourceCode}
               </Rsht>
             </div>
           : null
