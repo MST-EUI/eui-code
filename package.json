@@ -62,7 +62,7 @@
     "react-addons-test-utils": "^0.14.0"
   },
   "dependencies": {
-    "@mistong/eui": "^0.1.5",
+    "@mistong/eui": "^0.1.10",
     "@mistong/eui-css": "latest",
     "classnames": "^2.2.6",
     "react-syntax-highlighter": "^8.1.0"

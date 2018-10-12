@@ -20,6 +20,7 @@ export default class EuiCode extends React.Component {
     className: PropTypes.string,
     buttonText: PropTypes.any,
     prefixCls: PropTypes.string,
+    mode: PropTypes.string,
   };
 
   static defaultProps = {
@@ -30,6 +31,7 @@ export default class EuiCode extends React.Component {
     style: {},
     className: '',
     sourceCode: '',
+    mode: 'default', // ['default', 'inline', 'codeOnly']
   };
 
   constructor(props) {
@@ -55,44 +57,58 @@ export default class EuiCode extends React.Component {
       buttonText,
       lang,
       sourceCode,
+      mode,
     } = this.props;
-
     const btnDescription = buttonText || i18n[lang].btnText;
-
     const {
       codeVisible,
     } = this.state;
+    const isInlineMode = mode === 'inline';
+    const isCodeOnlyMode = mode === 'codeOnly';
+    const showCodeImmediately = isInlineMode || isCodeOnlyMode;
 
     return (
-      <div
-        className={classnames({ [`${prefixCls}`]: true }, { [className]: !!className })}
+      <span
+        className={classnames(
+          { [`${prefixCls}`]: true },
+          { [className]: !!className },
+          { [`mode-${mode}`]: mode },
+        )}
         style={style}
       >
-        <div className={`${prefixCls}-demo-preview`} >
-          {children}
-        </div>
-        <div
-          className={classnames(`${prefixCls}-demo-bottom`, { 'code-hidden': !codeVisible })}
-          role="button"
-          tabIndex="0"
-          onClick={self.codeToggle}
-        >
-          <div className="button-text">{btnDescription}</div>
-          <Icon type={codeVisible ? 'triangle-up' : 'triangle-down'} />
-        </div>
         {
-          codeVisible ?
+          showCodeImmediately ? null :
+          <div>
+            <div className={`${prefixCls}-demo-preview`} >
+              {children}
+            </div>
+            <div
+              className={classnames(`${prefixCls}-demo-bottom`, { 'code-hidden': !codeVisible })}
+              role="button"
+              tabIndex="0"
+              onClick={self.codeToggle}
+            >
+              <div className="button-text">{btnDescription}</div>
+              <Icon type={codeVisible ? 'triangle-up' : 'triangle-down'} />
+            </div>
+          </div>
+        }
+        {
+          (codeVisible || isCodeOnlyMode) ?
             <div className="pre">
               <Rsht
                 language="javascript"
                 customStyle={{ backgroundColor: 'transparent', padding: 0 }}
               >
-                {sourceCode}
+                {sourceCode || (showCodeImmediately && children)}
               </Rsht>
             </div>
           : null
         }
-      </div>
+        {
+          isInlineMode ? <code>{sourceCode || children}</code> : null
+        }
+      </span>
     );
   }
 }
