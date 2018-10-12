@@ -1,3 +1,13 @@
+<a name="0.1.3"></a>
+## [0.1.3](https://github.com/MST-EUI/eui-code/compare/v0.1.2...v0.1.3) (2018-10-12)
+
+
+### Features
+
+* add mode api ([216f5d1](https://github.com/MST-EUI/eui-code/commit/216f5d1))
+
+
+
 <a name="0.1.2"></a>
 ## [0.1.2](https://github.com/MST-EUI/eui-code/compare/v0.1.1...v0.1.2) (2018-10-08)
 
