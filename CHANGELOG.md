@@ -1,3 +1,13 @@
+<a name="0.1.4"></a>
+## [0.1.4](https://github.com/MST-EUI/eui-code/compare/v0.1.3...v0.1.4) (2018-10-12)
+
+
+### Bug Fixes
+
+* add demo in pkg ([00251ea](https://github.com/MST-EUI/eui-code/commit/00251ea))
+
+
+
 <a name="0.1.3"></a>
 ## [0.1.3](https://github.com/MST-EUI/eui-code/compare/v0.1.2...v0.1.3) (2018-10-12)
 
