@@ -1,3 +1,13 @@
+<a name="0.1.5"></a>
+## [0.1.5](https://github.com/MST-EUI/eui-code/compare/v0.1.4...v0.1.5) (2018-10-19)
+
+
+### Bug Fixes
+
+* text udpate for mode=inline ([f72eeab](https://github.com/MST-EUI/eui-code/commit/f72eeab))
+
+
+
 <a name="0.1.4"></a>
 ## [0.1.4](https://github.com/MST-EUI/eui-code/compare/v0.1.3...v0.1.4) (2018-10-12)
 
