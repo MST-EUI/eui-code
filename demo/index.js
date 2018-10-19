@@ -42,7 +42,7 @@ class DemoComponent extends React.Component {
         <EuiCode sourceCode={defaultCode} buttonText="默认形式（mode=default）">
         我是效果展示区域，可以放入任何内容
         </EuiCode>
-        <EuiCode sourceCode={inlineCode} buttonText="内联形式（mode=default）">
+        <EuiCode sourceCode={inlineCode} buttonText="内联形式（mode=inline">
           <p>
           该模式下
             <EuiCode mode="inline" >sourceCode</EuiCode>
