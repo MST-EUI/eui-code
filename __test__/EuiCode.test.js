@@ -10,7 +10,7 @@ test('EuiCode should render correctly', () => {
 });
 
 test('EuiCode props', () => {
-  const EuiCode = shallow(<EuiCode className="test" />);
-  expect(EuiCode.find('.eui-empty-data-content')).toBeTruthy();
+  const EuiCodeEle = shallow(<EuiCode className="test" />);
+  expect(EuiCodeEle.find('.eui-empty-data-content')).toBeTruthy();
 });
 
