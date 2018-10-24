@@ -1,3 +1,13 @@
+<a name="0.1.6"></a>
+## [0.1.6](https://github.com/MST-EUI/eui-code/compare/v0.1.5...v0.1.6) (2018-10-24)
+
+
+### Bug Fixes
+
+* test file eslint ([4299537](https://github.com/MST-EUI/eui-code/commit/4299537))
+
+
+
 <a name="0.1.5"></a>
 ## [0.1.5](https://github.com/MST-EUI/eui-code/compare/v0.1.4...v0.1.5) (2018-10-19)
 
